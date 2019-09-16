@@ -1,7 +1,7 @@
 /* ELEMENT STYLES -------------------- */
 
 body {
-  background: #e8e7e7; 
+  background: #f1f0e3; 
   font-family: arial;
   text-transform: uppercase;
 }
@@ -12,8 +12,7 @@ header {
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #8063FA;
-  border-bottom: solid 2px #D4CAFF;
+  background-color: #c99d63;
 }
 
 header h1 {
@@ -27,7 +26,7 @@ header h1 {
 
 form {
   display: flex;
-  background-color: #8063FA;
+  background-color: #c99d63;
 }
 
 input[type=text] {
@@ -36,22 +35,22 @@ input[type=text] {
   margin: 15px 10px 15px 15px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #5B45B9;
+  background-color: white;
   border-style: none;
   text-shadow: none;
   text-transform: uppercase;
-  color: #C7BCF8;
+  color: black;
   letter-spacing: 2px;
   outline: none;
 }
 
 input[type=text]::-webkit-input-placeholder{
-  color: #C7BCF8;
+  color: #9c8d7b;
   letter-spacing: 2px;
 }
 
 input[type=text]:focus{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #fadab1;
 }
 
 input[type=submit] {
@@ -59,10 +58,10 @@ input[type=submit] {
   font-size: .6em;
   margin: 15px 15px 15px 0; 
   padding: 10px;
-  background-color: #44338D;
+  background-color: #ffca85;
   border-radius: 5px;
   border: none;
-  color: #fff;
+  color: black;
   letter-spacing: 2px;
   font-weight: bold;
   text-shadow: none;
@@ -86,12 +85,6 @@ svg {
   fill: #F0F0F0;
 }
 
-.is-high-score {
-  fill: #FFC657;
-  animation: grow 0.35s ease-in-out;
-  transform-origin: 50% 50%;
-}
-
 @keyframes grow {
   50% { transform: scale(1.4) rotate(-3deg); }
 }
@@ -102,7 +95,6 @@ svg {
   background: #fff;
   width: 700px;
   margin: 70px auto;
-  box-shadow: 0 2px 0 rgb(133, 104, 250);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -114,9 +106,7 @@ svg {
   letter-spacing: 2px;
 }
 
-  .item:last-of-type {
-    border-bottom-color: #D4CAFF;
-  }
+  
 
   .item-name:hover .remove-item {
     visibility: visible;
@@ -124,7 +114,7 @@ svg {
 
   .item-name,
   .quantity {
-    color: #2F2366;
+    color:black;
   }
 
   .item-name {

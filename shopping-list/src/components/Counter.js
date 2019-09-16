@@ -18,7 +18,7 @@ class Counter extends Component {
             <div className="counter" >
                 <button className="counter-action decrement" onClick={this.condition()}> - </button>
                 <span className="counter-score">{this.props.quantity}</span>
-                <button className="counter-action decrement" onClick={() => this.props.changeScore(this.state.index, 1)}> + </button>
+                <button className="counter-action increment" onClick={() => this.props.changeScore(this.state.index, 1)}> + </button>
             </div>
         )
     }

@@ -9,25 +9,10 @@ class App extends Component {
   state = {
     items: [
       {
-        name: 'Carrots',
-        'quantity': 0,
-        'id': 1
-      },
-      {
         name: 'Bread',
-        'quantity': 0,
-        'id': 2
-      },
-      {
-        name: 'Fish',
-        'quantity': 0,
-        'id': 3
-      },
-      {
-        name: 'Salad',
-        'quantity': 0,
-        'id': 4
-      },
+        'quantity': 1,
+        'id': 1
+      }
     ]
   }
 
@@ -46,7 +31,7 @@ class App extends Component {
           ...prevState.items,
           {
             name,
-            quantity: 0,
+            quantity: 1,
             id: this.prevPlayerID += 1
           }
         ]
@@ -65,7 +50,9 @@ class App extends Component {
   render() {
     return (
       <div className="shoppinglist">
-        <Header title="Shopping List" />
+        <Header title="Shopping List" items={this.state.items} />
+
+
         {this.state.items.map((item, index) =>
           <Item
             name={item.name}
@@ -77,6 +64,7 @@ class App extends Component {
             removeItem={this.handleRemoveItem}
           />
         )}
+
         <AddItemForm addItem={this.handleAddItem} />
       </div>
     )

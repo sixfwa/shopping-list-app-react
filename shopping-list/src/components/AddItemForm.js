@@ -7,13 +7,17 @@ class AddItemForm extends Component {
     }
 
     handleValueChange = (e) => {
+        console.log(e.target.value)
         this.setState({ value: e.target.value })
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.addItem(this.state.value);
-        this.setState({ value: '' })
+        if (this.state.value.replace(/\s/g, '').length) {
+            this.props.addItem(this.state.value);
+            this.setState({ value: '' })
+        }
+
     }
 
     render() {
